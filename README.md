@@ -2,7 +2,7 @@
 
 模仿探探卡片滑动效果的布局.
 
-## 简单实用
+## 简单使用
 参考：example中的simple_page.dart
 
 ```dart
