@@ -1,6 +1,13 @@
 # KoSwipeCard
 
-模仿探探卡片滑动效果的布局.
+模仿探探卡片滑动效果的布局。<br>
+已在插件市场发布
+```
+dependencies:
+  ko_swipe_card: ^1.0.0
+```
+
+
 
 ## 简单使用
 参考：example中的simple_page.dart
