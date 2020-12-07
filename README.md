@@ -2,6 +2,7 @@
 
 模仿探探卡片滑动效果的布局。<br>
 已在插件市场发布
+https://pub.dev/packages/ko_swipe_card
 ```
 dependencies:
   ko_swipe_card: ^1.0.0
