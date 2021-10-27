@@ -26,12 +26,12 @@ class CardInfoBean {
   final BoxFit fit;
 
   CardInfoBean({
-    this.imageUrl,
-    this.personName,
-    this.personSex,
-    this.personAge,
-    this.personZodiac,
-    this.personOccupation,
+    required this.imageUrl,
+    required this.personName,
+    required this.personSex,
+    required this.personAge,
+    required this.personZodiac,
+    required this.personOccupation,
     this.fit = BoxFit.cover,
   });
 }

@@ -64,9 +64,9 @@ class KoSwipeCard extends StatefulWidget {
   ///  [dismissDuration] 划掉的动画持续时间
   ///  [recoverDuration] 恢复原位的动画持续时间
   KoSwipeCard({
-    @required this.itemCount,
-    @required this.indexedCardBuilder,
-    @required this.topCardDismissListener,
+    required this.itemCount,
+    required this.indexedCardBuilder,
+    required this.topCardDismissListener,
     this.cardCount = 4,
     this.cardWidth = 319.5,
     this.cardHeight = 252,
@@ -93,16 +93,16 @@ class KoSwipeCardState extends State<KoSwipeCard>
   Offset _offset = Offset.zero;
 
   ///  动画控制器
-  AnimationController _flingController;
+  late AnimationController _flingController;
 
   ///  fling动画
-  Animation<Offset> _flingAnimation;
+  late Animation<Offset> _flingAnimation;
 
   ///  滑动动画的controller
-  AnimationController _swipeController;
+  late AnimationController _swipeController;
 
   ///  滑到阈值, 顶部图片滑出去的动画(没滑到阈值就做恢复动画)
-  Animation<Offset> _swipeAnimation;
+  late Animation<Offset> _swipeAnimation;
 
   @override
   void initState() {
@@ -203,7 +203,7 @@ class KoSwipeCardState extends State<KoSwipeCard>
   ///  [direction] fling的方向
   void _startFlingAnimation(double magnitude, Offset direction) {
     //  计算fling的距离
-    final double distance = (Offset.zero & context.size).shortestSide / 5;
+    final double distance = (Offset.zero & context.size!).shortestSide / 5;
     _flingAnimation = _flingController.drive(Tween<Offset>(
       begin: _offset,
       end: _offset + direction * distance,
@@ -481,7 +481,7 @@ class KoSwipeCardState extends State<KoSwipeCard>
   @override
   Widget build(BuildContext context) {
     //  创建卡片列表的容器
-    List<Widget> cardList = List();
+    List<Widget> cardList = [];
 
     if (widget.cardCount < 3) {
       throw Exception("At least three cards");
